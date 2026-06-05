@@ -1,0 +1,9 @@
+bucket_name = "aws-devops-platform-state"
+vpc_cidr = "11.0.0.0/16"
+vpc_name = "aws devops platform vpc"
+public_subnet_cidrs = ["11.0..1.0/24", "11.0.2./24"]
+private_subnet_cdirs = ["11.0.3.0/24", "11.0.4.0/24"]
+us-availability-zones = ["us-east-1a", "us-east-1b"]
+public_key = "demo-ec2-saa-series"
+instance_type = "m7i-flex.large"
+ec2_ami_id = "ami-05cf1e9f73fbad2e2" 
