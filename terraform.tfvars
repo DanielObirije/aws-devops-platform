@@ -7,3 +7,4 @@ us-availability-zones = ["us-east-1a", "us-east-1b"]
 public_key = "demo-ec2-saa-series"
 instance_type = "m7i-flex.large"
 ec2_ami_id = "ami-05cf1e9f73fbad2e2" 
+ec2_sg_name = "aws-devops-platform-sg"

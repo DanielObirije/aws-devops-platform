@@ -42,3 +42,8 @@ variable "ec2_ami_id" {
     type = string
     description = "AMI ID for EC2 instances"
 }
+
+variable "ec2_sg_name" {
+    type = string
+    description = "Security group name"
+}
