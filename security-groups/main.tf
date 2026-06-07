@@ -1,5 +1,6 @@
 variable "vpc_id" {}
 variable "ec2_sg_name" {}
+variable "ec2_jenkins_sg_name" {}
 
 
 resource "aws_security_group" "ec2_sg" {
@@ -41,5 +42,21 @@ resource "aws_security_group" "ec2_sg" {
 
  tags = {
    Name = "Security group to allow  Port 22(SSH), Port 80(HTTP), Port 443(HTTPS)"
+ }
+}
+
+resource "aws_security_group" "ec2_jenkins" {
+  name =  var.ec2_jenkins_sg_name
+  description = "Enable port 8080 for jenkins"
+  vpc_id = var.vpc_id
+ingress {
+    description = "Allow port 8080 to accesss jenkins"
+    cidr_blocks = [ "0.0.0.0/0" ]
+    from_port = 8080
+    to_port = 8080
+    protocol = "tcp"
+ }
+  tags = {
+   Name = "Security group to allow  Port 22(SSH) and Port 80(HTTP) for jenkins,"
  }
 }
