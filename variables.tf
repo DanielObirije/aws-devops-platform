@@ -45,5 +45,5 @@ variable "ec2_ami_id" {
 
 variable "ec2_sg_name" {
     type = string
-    description = "Security group name"
+    description = "Security "
 }

@@ -2,6 +2,13 @@ variable "vpc_id" {}
 variable "ec2_sg_name" {}
 variable "ec2_jenkins_sg_name" {}
 
+output "Ec2_public_sg" {
+  value = aws_security_group.ec2_sg.id
+}
+
+output "Jenkins_ec2_public_sg" {
+  value = aws_security_group.ec2_jenkins.id
+}
 
 resource "aws_security_group" "ec2_sg" {
  name = var.ec2_sg_name

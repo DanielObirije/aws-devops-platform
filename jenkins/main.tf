@@ -12,7 +12,7 @@ output "ssh_connection_string_for_ec2" {
   value = format("%s%s","ssh -i /Users/ubuntu/.ssh/aws_ec2_terraform ubuntu@",aws_instance.jenkins_ec2_instance.public_ip)
 }
 
-output "jenkins_ec2_instance_ip" {
+output "jenkins_ec2_instance_id" {
    value = aws_instance.jenkins_ec2_instance.id
 }
 

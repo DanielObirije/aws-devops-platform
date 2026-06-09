@@ -1,6 +1,6 @@
 variable "lb_name"{}
 variable "lb_type" {}
-variable "external" {default =  false}
+variable "is_external" {default =  false}
 variable "subnet_ids" {}
 variable "sg_enable_ssh_https" {}
 variable "lb_target_group_arn" {}
@@ -25,7 +25,7 @@ output "load_balancer_zone_id" {
 
 resource "aws_lb" "aws-devops-platform_lb" {
     name =  var.lb_name
-    internal =  var.external
+    internal =  var.is_external
     load_balancer_type = var.lb_type
     subnets = var.subnet_ids
     security_groups =  var.sg_enable_ssh_https 
